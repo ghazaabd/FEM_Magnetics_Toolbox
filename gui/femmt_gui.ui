@@ -159,7 +159,7 @@
                      </property>
                     </spacer>
                    </item>
-                   <item row="3" column="3">
+                   <item row="3" column="1">
                     <spacer name="horizontalSpacer_13">
                      <property name="orientation">
                       <enum>Qt::Horizontal</enum>
@@ -172,18 +172,12 @@
                      </property>
                     </spacer>
                    </item>
-                   <item row="0" column="3">
-                    <spacer name="horizontalSpacer_14">
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
+                   <item row="0" column="3" rowspan="4" colspan="2">
+                    <widget class="QLabel" name="md_core_figure">
+                     <property name="text">
+                      <string/>
                      </property>
-                     <property name="sizeHint" stdset="0">
-                      <size>
-                       <width>40</width>
-                       <height>20</height>
-                      </size>
-                     </property>
-                    </spacer>
+                    </widget>
                    </item>
                   </layout>
                  </widget>
@@ -862,7 +856,7 @@
                      </property>
                      <property name="sizeHint" stdset="0">
                       <size>
-                       <width>40</width>
+                       <width>80</width>
                        <height>20</height>
                       </size>
                      </property>
@@ -1523,7 +1517,7 @@
                   </property>
                   <property name="sizeHint" stdset="0">
                    <size>
-                    <width>40</width>
+                    <width>80</width>
                     <height>20</height>
                    </size>
                   </property>

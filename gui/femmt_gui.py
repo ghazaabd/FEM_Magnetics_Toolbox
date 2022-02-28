@@ -430,10 +430,22 @@ class MainWindow(QMainWindow):
             self.md_core_width_lineEdit.setEnabled(False)
             self.md_window_height_lineEdit.setEnabled(False)
             self.md_window_width_lineEdit.setEnabled(False)
+
+            if "pq" in core_type.lower():
+                pixmap = QPixmap("./pq_core.jpg")
+                self.md_core_figure.setPixmap(pixmap)
+                self.md_core_figure.setMask(pixmap.mask())
+                self.md_core_figure.show()
         else:
             self.md_core_width_lineEdit.setEnabled(True)
             self.md_window_height_lineEdit.setEnabled(True)
             self.md_window_width_lineEdit.setEnabled(True)
+            pixmap = QPixmap("./core.png")
+            self.md_core_figure.setPixmap(pixmap)
+            self.md_core_figure.setMask(pixmap.mask())
+            self.md_core_figure.show()
+
+
 
     def md_winding1_set_litz_parameters_from_litz_database(self):
         litz_dict = fmt.litz_database()

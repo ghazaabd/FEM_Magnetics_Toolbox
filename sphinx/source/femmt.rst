@@ -12,17 +12,17 @@ The ``MagneticComponent`` class
    :special-members: __init__
    :member-order: bysource
 
-FEMMT methods
-**************
+FEMMT functions
+***************
 
 .. automodule:: femmt.femmt_functions
     :members:
     :undoc-members:
-    
+  
 FEMMT Thermal
 **************
 
-.. currentmodule:: femmt.thermal_classes
+.. currentmodule:: femmt.thermal.thermal_classes
 
 .. autoclass:: ConstraintPro
     :members:

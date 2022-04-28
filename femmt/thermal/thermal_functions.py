@@ -2,19 +2,16 @@ import json
 import numpy as np
 import os
 
-def calculate_heat_flux_round_wire(power, radius):
+def calculate_heat_flux_round_wire(power, wire_radius, wire_distance):
     """
     :param power: losses in Watts
     :param radius: wire thickness in m
     """
-
-    wire_thickness = radius
-
     # Power density for volumes W/m^3
-    return power/(2*np.pi**2 * wire_thickness**2)
+    #volume = 2 * np.pi**2 * wire_radius**2 * wire_position_x
+    volume = 2 * np.pi**2 * wire_radius**2 * wire_distance
 
-    # Power density for surfaces W/m^2
-    #return power/(np.pi * wire_thickness**2)
+    return power/volume
 
 def read_results_log(results_log_file_path):
     losses = {}
@@ -22,6 +19,6 @@ def read_results_log(results_log_file_path):
         raise Exception(f"Losses file not found {results_log_file_path}.")
     with open(results_log_file_path, "r") as fd:
         content = json.loads(fd.read())
-        losses = content["Losses"]
+        losses = content["total_losses"]
 
     return losses

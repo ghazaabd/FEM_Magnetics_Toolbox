@@ -93,10 +93,12 @@ class FunctionPro:
 
     def add_dicts(self, k, q_vol):
         """
-        Order is important: k, rho, c, qVol
+        Order is important: k, qVol
         """
-        self.k.update(k)
-        self.q_vol.update(q_vol)
+        if k is not None:
+            self.k.update(k)
+        if q_vol is not None:
+            self.q_vol.update(q_vol)
 
     def create_file(self, file_path):
         with open(file_path, 'w') as fd:
